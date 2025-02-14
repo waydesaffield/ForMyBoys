@@ -6,7 +6,8 @@ body {
     text-align: center;
     margin: 0;
     padding: 0;
-    overflow: hidden;
+    overflow-x: hidden; /* Prevents horizontal scroll */
+    overflow-y: auto; /* Allows vertical scrolling */
     position: relative;
 }
 
@@ -58,6 +59,12 @@ p {
     100% { opacity: 1; transform: scale(1.2); }
 }
 
+/* Ensure Scrolling Works on Mobile */
+.container {
+    min-height: 100vh;
+    padding-bottom: 50px; /* Ensures space for scrolling */
+}
+
 /* Hero Gallery */
 .hero-gallery {
     display: flex;
@@ -102,3 +109,4 @@ footer {
     padding: 20px;
     text-shadow: 0 0 15px rgba(255, 255, 255, 1);
 }
+
